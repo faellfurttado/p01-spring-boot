@@ -1,5 +1,3 @@
-package com.faelfurtado.projeto;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -11,5 +9,4 @@ public class ProjetoApplication {
 		System.out.println("Meu primeiro Projeto com Spring Boot ...");
 		SpringApplication.run(ProjetoApplication.class, args);
 	}
-
 }
