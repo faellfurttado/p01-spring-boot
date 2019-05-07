@@ -1,4 +1,4 @@
-package util;
+package dcomp.lpweb.projeto.api.util;
 
 import java.beans.FeatureDescriptor;
 import java.util.stream.Stream;

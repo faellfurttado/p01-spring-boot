@@ -1,4 +1,4 @@
-package controller.response;
+package dcomp.lpweb.projeto.api.controller.response;
 
 import java.util.ArrayList;
 import java.util.List;

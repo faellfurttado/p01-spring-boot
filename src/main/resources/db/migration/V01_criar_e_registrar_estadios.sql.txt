@@ -1,0 +1,11 @@
+    
+CREATE TABLE estadio (
+  id INT NOT NULL AUTO_INCREMENT,
+  nome VARCHAR(100) NOT NULL,
+  time INT(11),
+  PRIMARY KEY (id)
+) engine=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO estadio (nome) VALUES ('Maracanã');
+INSERT INTO estadio (nome) VALUES ('Morumbi');
+INSERT INTO estadio (nome) VALUES ('Mineirão');

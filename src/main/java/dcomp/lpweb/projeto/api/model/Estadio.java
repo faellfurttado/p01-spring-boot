@@ -1,4 +1,4 @@
-package model;
+package dcomp.lpweb.projeto.api.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

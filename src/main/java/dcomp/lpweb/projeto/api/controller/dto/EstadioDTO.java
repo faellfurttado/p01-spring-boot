@@ -1,4 +1,4 @@
-package controller.dto;
+package dcomp.lpweb.projeto.api.controller.dto;
 
 public class EstadioDTO {
 	

@@ -1,4 +1,4 @@
-package model;
+package dcomp.lpweb.projeto.api.model;
 
 import java.util.Calendar;
 

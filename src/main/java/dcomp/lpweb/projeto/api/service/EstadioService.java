@@ -1,6 +1,6 @@
-package service;
+package dcomp.lpweb.projeto.api.service;
 
-import model.Estadio;
+import dcomp.lpweb.projeto.api.model.Estadio;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import repository.EstadioRepository;
+import dcomp.lpweb.projeto.api.repository.EstadioRepository;
 
 @Service
 public class EstadioService {

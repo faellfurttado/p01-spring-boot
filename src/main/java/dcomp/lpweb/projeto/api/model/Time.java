@@ -1,4 +1,4 @@
-package model;
+package dcomp.lpweb.projeto.api.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,7 +11,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "estadio")
+@Table(name = "time")
 public class Time {
 	
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,11 +23,11 @@ public class Time {
 	@JoinColumn(name = "estadio_sede_id")
 	private Estadio sede;
 	
-	@OneToMany
+	/*@OneToMany
 	@JoinTable (name ="time_jogadores",
 	 			joinColumns = @JoinColumn (name =" time_id"),
 	 			inverseJoinColumns = @JoinColumn (name =" jogador_id"))
-	private Jogador jogadores;
+	private Jogador jogadores;*/
 	
 	public Time() {}
 

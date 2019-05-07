@@ -1,4 +1,4 @@
-package controller;
+package dcomp.lpweb.projeto.api.controller;
 
 import java.net.URI;
 import java.util.ArrayList;
@@ -19,11 +19,11 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import org.springframework.http.HttpStatus;
 
-import controller.dto.EstadioDTO;
-import controller.response.Resposta;
-import model.Estadio;
-import service.EstadioService;
-import util.PropriedadesUtil;
+import dcomp.lpweb.projeto.api.controller.dto.EstadioDTO;
+import dcomp.lpweb.projeto.api.controller.response.Resposta;
+import dcomp.lpweb.projeto.api.model.Estadio;
+import dcomp.lpweb.projeto.api.service.EstadioService;
+import dcomp.lpweb.projeto.api.util.PropriedadesUtil;
 
 @RestController
 @RequestMapping("/estadios")
