@@ -16,16 +16,18 @@ public class Estadio {
 	private Integer id;
 	
 	private String nome;	
+	private String endereco;
 	
-	@OneToOne
-	@JoinColumn(name = "time_id")
-	private Time time;
+	//@OneToOne
+	//@JoinColumn(name = "time_id")
+	//private Time time;
 	
 	public Estadio() {}
 
-    public Estadio(String nome, Time time) {
+    public Estadio(String nome, String endereco) {
         this.nome = nome;
-        this.time = time;
+        this.endereco = endereco;
+      
     }
 	
 	public Integer getId(){
@@ -38,5 +40,13 @@ public class Estadio {
 	
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+	
+	public String getEndereco(){
+		return this.endereco;
+	}
+	
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
 	}
 }
