@@ -1,4 +1,4 @@
-package dcomp.lpweb.projeto.api.controller.validation;
+package dcomp.lpweb.projeto.api.controller.event;
 
 import org.springframework.context.ApplicationEvent;
 import javax.servlet.http.HttpServletResponse;

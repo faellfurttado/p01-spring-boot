@@ -16,10 +16,14 @@ public class EstadioService {
 	
 	private final EstadioRepository estadioRepository;
 	
+	private final GenericoService<Estadio> genericoService;
+	
 	@Autowired
 	public EstadioService(EstadioRepository estadioRepository) {
 
 	        this.estadioRepository = estadioRepository;
+	        
+	        genericoService = new GenericoService<>(estadioRepository);
 	}
 	
 	@Transactional(readOnly = true)
@@ -47,9 +51,10 @@ public class EstadioService {
     @Transactional
     public Estadio atualiza(Integer id, Estadio estadio) {
 
-    	Estadio estadioSalvo = this.buscaPor(id);
-        BeanUtils.copyProperties(estadio, estadioSalvo, "id");
-
-        return  estadioSalvo;
+    	return  genericoService.atualiza(estadio, id );
+    }
+    
+    public List<Estadio> buscaCategorias(List<Integer> idsEstadios) {
+        return estadioRepository.findAllById(idsEstadios );
     }
 }

@@ -26,10 +26,10 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import org.springframework.http.HttpStatus;
 
 import dcomp.lpweb.projeto.api.controller.dto.EstadioDTO;
-import dcomp.lpweb.projeto.api.controller.event.Validacao;
+import dcomp.lpweb.projeto.api.controller.validation.Validacao;
 import dcomp.lpweb.projeto.api.controller.response.Erro;
 import dcomp.lpweb.projeto.api.controller.response.Resposta;
-import dcomp.lpweb.projeto.api.controller.validation.HeaderLocationEvento;
+import dcomp.lpweb.projeto.api.controller.event.HeaderLocationEvento;
 import dcomp.lpweb.projeto.api.model.Estadio;
 import dcomp.lpweb.projeto.api.service.EstadioService;
 import dcomp.lpweb.projeto.api.util.PropriedadesUtil;

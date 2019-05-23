@@ -1,4 +1,4 @@
-package dcomp.lpweb.projeto.api.controller.event;
+package dcomp.lpweb.projeto.api.controller.validation;
 
 import dcomp.lpweb.projeto.api.controller.dto.EstadioDTO;
 import dcomp.lpweb.projeto.api.controller.response.Erro;

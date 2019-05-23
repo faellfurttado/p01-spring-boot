@@ -1,4 +1,4 @@
-package dcomp.lpweb.projeto.api.controller.validation;
+package dcomp.lpweb.projeto.api.controller.event;
 
 import java.net.URI;
 
