@@ -23,10 +23,6 @@ public class Time {
 	@JoinColumn(name = "estadio_id")
 	private Estadio sede;
 	
-	//@OneToOne
-	//@JoinColumn(name = "capitao_id")
-	//private Jogador capitao;
-	
 	public Time() {}
 
     public Time(String nome, Estadio sede) {
@@ -42,10 +38,27 @@ public class Time {
 		return this.nome;
 	}
 	
+	public Estadio getEstadio(){
+		return this.sede;
+	}
+	
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+	
+	public void setEstadio(Estadio estadio) {
+		this.sede = estadio;
+	}
+	
+	//@OneToOne
+		//@JoinColumn(name = "capitao_id")
+		//private Jogador capitao;
 	/*
+	 * 
 	 * private Partida partidasComoVisitante;
 	 * private Partida partidasComoMandante;
 	 * private Campeonato campeonatos;

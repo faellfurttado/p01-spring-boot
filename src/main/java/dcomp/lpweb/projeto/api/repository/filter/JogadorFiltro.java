@@ -21,7 +21,6 @@ public class JogadorFiltro {
 		return this.nome;
 	}
 	
-	
 	public String getGenero(){
 		return this.genero;
 	}
