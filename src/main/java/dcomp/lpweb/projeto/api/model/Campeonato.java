@@ -1,5 +1,7 @@
 package dcomp.lpweb.projeto.api.model;
 
+import java.util.Objects;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -38,4 +40,26 @@ public class Campeonato {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+	
+	@Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Campeonato)) return false;
+        Campeonato campeonato = (Campeonato) o;
+        return Objects.equals(getId(), campeonato.getId());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId());
+    }
+    
+    @Override
+	 public String toString() {
+	        return "Campeonato{" +
+	                "id=" + id +
+	                ", nome='" + nome + '\'' +
+	                ", ano ='" + ano + '\'' +
+	                '}';
+	 }
 }

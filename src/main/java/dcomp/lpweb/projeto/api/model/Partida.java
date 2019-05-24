@@ -1,6 +1,7 @@
 package dcomp.lpweb.projeto.api.model;
 
 import java.util.Calendar;
+import java.util.Objects;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -95,4 +96,30 @@ public class Partida {
 	public void setCampeonato(Campeonato campeonato){
 		this.campeonato = campeonato;
 	}
+	
+	@Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Partida)) return false;
+        Partida partida = (Partida) o;
+        return Objects.equals(getId(), partida.getId());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId());
+    }
+    
+    @Override
+	 public String toString() {
+	        return "Partida{" +
+	                "id=" + id +
+	                ", data='" + data + '\'' +
+	                ", pontuacaoMandante ='" + pontuacaoMandante + '\'' +
+	                ", pontuacaoVisitante='" + pontuacaoMandante + '\'' +
+	                ", mandante='" + mandante + '\'' +
+	                ", visitante='" + visitante + '\'' +
+	                ", campeonato='" + campeonato + '\'' +
+	                '}';
+	 }
 }

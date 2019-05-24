@@ -1,12 +1,12 @@
 package dcomp.lpweb.projeto.api.model;
 
+import java.util.Objects;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -54,13 +54,25 @@ public class Time {
 		this.sede = estadio;
 	}
 	
-	//@OneToOne
-		//@JoinColumn(name = "capitao_id")
-		//private Jogador capitao;
-	/*
-	 * 
-	 * private Partida partidasComoVisitante;
-	 * private Partida partidasComoMandante;
-	 * private Campeonato campeonatos;
-	 * */
+	@Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Time)) return false;
+        Time time = (Time) o;
+        return Objects.equals(getId(), time.getId());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId());
+    }
+    
+    @Override
+	 public String toString() {
+	        return "Time{" +
+	                "id=" + id +
+	                ", nome='" + nome + '\'' +
+	                ", estadio ='" + sede + '\'' +
+	                '}';
+	 }
 }

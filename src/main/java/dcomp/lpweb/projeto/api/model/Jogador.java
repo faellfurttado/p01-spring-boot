@@ -1,6 +1,7 @@
 package dcomp.lpweb.projeto.api.model;
 
 import java.util.Calendar;
+import java.util.Objects;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,7 +9,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -96,4 +96,30 @@ public class Jogador {
 	public void setTimeEmQueJoga(Time timeEmQueJoga){
 		this.timeEmQueJoga = timeEmQueJoga;
 	}
+	
+	@Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Jogador)) return false;
+        Jogador jogador = (Jogador) o;
+        return Objects.equals(getId(), jogador.getId());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId());
+    }
+    
+	@Override
+    public String toString() {
+        return "Jogador{" +
+                "jogadorId=" + id +
+                ", nome='" + nome + '\'' +
+                ", genero='" + genero + '\'' +
+                ", altura='" + altura + '\'' +
+                ", capitao='" + capitao + '\'' +
+                ", nascimento='" + nascimento + '\'' +
+                ", timeEmQueJoga='" + timeEmQueJoga + '\'' +
+                '}';
+    }
 }

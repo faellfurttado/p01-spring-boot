@@ -1,11 +1,11 @@
 package dcomp.lpweb.projeto.api.model;
 
+import java.util.Objects;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -44,4 +44,26 @@ public class Estadio {
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
 	}
+	
+	@Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Estadio)) return false;
+        Estadio estadio = (Estadio) o;
+        return Objects.equals(getId(), estadio.getId());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId());
+    }
+    
+    @Override
+    public String toString() {
+        return "Estadio{" +
+                "nome='" + nome + '\'' +
+                ", endereco=" + endereco +
+                ", estadioId=" + id +
+                '}';
+    }
 }
