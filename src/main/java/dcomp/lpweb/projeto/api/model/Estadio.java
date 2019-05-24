@@ -18,16 +18,11 @@ public class Estadio {
 	private String nome;	
 	private String endereco;
 	
-	//@OneToOne
-	//@JoinColumn(name = "time_id")
-	//private Time time;
-	
 	public Estadio() {}
 
     public Estadio(String nome, String endereco) {
         this.nome = nome;
-        this.endereco = endereco;
-      
+        this.endereco = endereco; 
     }
 	
 	public Integer getId(){

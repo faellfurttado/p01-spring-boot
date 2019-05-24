@@ -66,7 +66,7 @@ public class EstadioDTO {
         return "EstadioDTO{" +
                 "id=" + id +
                 ", nome='" + nome + '\'' +
-                ", descricao='" + endereco + '\'' +
+                ", endereco='" + endereco + '\'' +
                 '}';
     }
 }

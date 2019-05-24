@@ -23,11 +23,9 @@ public class Time {
 	@JoinColumn(name = "estadio_sede_id")
 	private Estadio sede;
 	
-	/*@OneToMany
-	@JoinTable (name ="time_jogadores",
-	 			joinColumns = @JoinColumn (name =" time_id"),
-	 			inverseJoinColumns = @JoinColumn (name =" jogador_id"))
-	private Jogador jogadores;*/
+	@OneToOne
+	@JoinColumn(name = "capitao_id")
+	private Jogador capitao;
 	
 	public Time() {}
 
@@ -47,16 +45,9 @@ public class Time {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-
 	/*
 	 * private Partida partidasComoVisitante;
 	 * private Partida partidasComoMandante;
 	 * private Campeonato campeonatos;
 	 * */
-	
-	/*
-	@OneToOne
-	@JoinColumn(name = "capitao_id")
-	private Jogador capitao;
-	*/
 }

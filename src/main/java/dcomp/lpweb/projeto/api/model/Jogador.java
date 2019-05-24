@@ -21,21 +21,79 @@ public class Jogador {
 	private Integer id;
 	
 	private String nome;
+	private String genero;
+	private Double altura;
+	
+	@JoinColumn(name = "capitao")
+	private boolean ehCapitao;
 	
 	@Temporal(TemporalType.DATE)
 	private Calendar nascimento;
-	
-	private String genero;
-	
-	private Double altura;
 	
 	@ManyToOne
 	@JoinColumn(name = "time_id")
 	private Time timeEmQueJoga;
 	
-	/*
-	@OneToOne
-	@JoinColumn(name = "capitao_time_id")
-	private Time timeQueCapitaneia;
-	*/
+	public Jogador() {
+	
+	}
+	
+	public Jogador(String nome,String genero, Double altura, boolean ehCapitao, Calendar nascimento, Time timeEmQueJoga) {
+		
+		this.nome = nome;
+		this.genero = genero;
+		this.altura = altura;
+		this.ehCapitao = ehCapitao;
+		this.nascimento = nascimento;
+		this.timeEmQueJoga = timeEmQueJoga;
+	}
+	
+	public Integer getId(){
+		return this.id;
+	}
+	
+	public String getNome(){
+		return this.nome;
+	}
+	
+	public String getGenero(){
+		return this.genero;
+	}
+	
+	public Double getAltura(){
+		return this.altura;
+	}
+	
+	public Calendar getNascimento(){
+		return this.nascimento;
+	}
+	
+	public Time getTimeEmQueJoga(){
+		return this.timeEmQueJoga;
+	}
+	
+	
+	public void setNascimento(Calendar nascimento){
+		this.nascimento = nascimento;
+	}
+	
+	public void setCapitao(boolean valor){
+		this.ehCapitao = valor;
+	}
+	
+	public boolean getEhCapitao(){
+		return this.ehCapitao;
+	}
+	
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	
+	public void setAltura(Double altura){
+		this.altura = altura;
+	}
+	
+	public void setTimeEmQueJoga(Time timeEmQueJoga){
+		this.timeEmQueJoga = timeEmQueJoga;
+	}
 }

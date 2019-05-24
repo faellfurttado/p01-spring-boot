@@ -33,7 +33,7 @@ public class EstadioFiltro {
 
     @Override
     public String toString() {
-        return "Esatadiofiltro{" +
+        return "Estadiofiltro{" +
                 "nome='" + nome + '\'' +
                 ", endereco=" + endereco +
                 ", estadioId=" + estadioId +
