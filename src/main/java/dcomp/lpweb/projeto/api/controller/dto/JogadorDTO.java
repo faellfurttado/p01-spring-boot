@@ -15,11 +15,11 @@ public class JogadorDTO {
 	@Size(min = 5, max = 100)
 	private String nome;	
 	
-	@Size(min = 1, max = 10)
+	@Size(min = 1, max = 20)
 	private String genero;
 	
 	private Double altura;
-	private boolean ehCapitao;
+	private boolean capitao;
 	private Calendar nascimento;
 	private Time timeEmQueJoga;
 	
@@ -57,7 +57,7 @@ public class JogadorDTO {
 	}
 	
 	public boolean getEhCapitao(){
-		return this.ehCapitao;
+		return this.capitao;
 	}
 	
 	public void setId(Integer id) {
@@ -73,7 +73,7 @@ public class JogadorDTO {
 	}
 	
 	public void setCapitao(boolean valor){
-		this.ehCapitao = valor;
+		this.capitao = valor;
 	}
 	
 	public void setAltura(Double altura){
@@ -104,7 +104,7 @@ public class JogadorDTO {
                 ", nome='" + nome + '\'' +
                 ", genero='" + genero + '\'' +
                 ", altura='" + altura + '\'' +
-                ", ehCapitao='" + ehCapitao + '\'' +
+                ", capitao='" + capitao + '\'' +
                 ", nascimento='" + nascimento + '\'' +
                 ", timeEmQueJoga='" + timeEmQueJoga + '\'' +
                 '}';

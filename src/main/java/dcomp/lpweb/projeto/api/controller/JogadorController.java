@@ -46,13 +46,13 @@ public class JogadorController {
 	    @GetMapping
 	    public Resposta<List<JogadorDTO>> todos(){
 	    	
-	    	List<JogadorDTO> jogadorsDTO = jogadorService.todos()
+	    	List<JogadorDTO> jogadoresDTO = jogadorService.todos()
                    .stream()
                    .map(jogador -> new JogadorDTO(jogador))
                    .collect(Collectors.toList());
 
 
-	    	 return Resposta.comDadosDe(jogadorsDTO);
+	    	 return Resposta.comDadosDe(jogadoresDTO);
 	    }
 	    
 	    @PostMapping

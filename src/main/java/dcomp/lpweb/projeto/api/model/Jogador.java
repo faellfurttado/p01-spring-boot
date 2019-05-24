@@ -25,7 +25,7 @@ public class Jogador {
 	private Double altura;
 	
 	@JoinColumn(name = "capitao")
-	private boolean ehCapitao;
+	private boolean capitao;
 	
 	@Temporal(TemporalType.DATE)
 	private Calendar nascimento;
@@ -38,12 +38,12 @@ public class Jogador {
 	
 	}
 	
-	public Jogador(String nome,String genero, Double altura, boolean ehCapitao, Calendar nascimento, Time timeEmQueJoga) {
+	public Jogador(String nome,String genero, Double altura, boolean capitao, Calendar nascimento, Time timeEmQueJoga) {
 		
 		this.nome = nome;
 		this.genero = genero;
 		this.altura = altura;
-		this.ehCapitao = ehCapitao;
+		this.capitao = capitao;
 		this.nascimento = nascimento;
 		this.timeEmQueJoga = timeEmQueJoga;
 	}
@@ -78,11 +78,11 @@ public class Jogador {
 	}
 	
 	public void setCapitao(boolean valor){
-		this.ehCapitao = valor;
+		this.capitao = valor;
 	}
 	
 	public boolean getEhCapitao(){
-		return this.ehCapitao;
+		return this.capitao;
 	}
 	
 	public void setNome(String nome) {

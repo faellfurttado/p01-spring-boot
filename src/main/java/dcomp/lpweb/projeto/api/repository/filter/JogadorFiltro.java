@@ -9,7 +9,7 @@ public class JogadorFiltro {
 	private String nome;
 	private String genero;
 	private Double altura;
-	private boolean ehCapitao;
+	private boolean capitao;
 	private Calendar nascimento;
 	private Time timeEmQueJoga;
 	
@@ -39,7 +39,7 @@ public class JogadorFiltro {
 	}
 	
 	public boolean getEhCapitao(){
-		return this.ehCapitao;
+		return this.capitao;
 	}
 	
 	public void setId(Integer jogadorId) {
@@ -55,7 +55,7 @@ public class JogadorFiltro {
 	}
 	
 	public void setCapitao(boolean valor){
-		this.ehCapitao = valor;
+		this.capitao = valor;
 	}
 	
 	public void setAltura(Double altura){
@@ -73,7 +73,7 @@ public class JogadorFiltro {
                 ", nome='" + nome + '\'' +
                 ", genero='" + genero + '\'' +
                 ", altura='" + altura + '\'' +
-                ", ehCapitao='" + ehCapitao + '\'' +
+                ", capitao='" + capitao + '\'' +
                 ", nascimento='" + nascimento + '\'' +
                 ", timeEmQueJoga='" + timeEmQueJoga + '\'' +
                 '}';

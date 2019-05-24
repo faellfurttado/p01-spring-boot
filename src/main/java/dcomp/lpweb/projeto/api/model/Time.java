@@ -20,12 +20,12 @@ public class Time {
 	private String nome;
 	
 	@OneToOne
-	@JoinColumn(name = "estadio_sede_id")
+	@JoinColumn(name = "estadio_id")
 	private Estadio sede;
 	
-	@OneToOne
-	@JoinColumn(name = "capitao_id")
-	private Jogador capitao;
+	//@OneToOne
+	//@JoinColumn(name = "capitao_id")
+	//private Jogador capitao;
 	
 	public Time() {}
 
