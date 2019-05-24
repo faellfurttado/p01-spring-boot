@@ -1,43 +1,18 @@
-package dcomp.lpweb.projeto.api.model;
+package dcomp.lpweb.projeto.api.repository.filter;
 
 import java.util.Calendar;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import dcomp.lpweb.projeto.api.model.Campeonato;
+import dcomp.lpweb.projeto.api.model.Time;
 
-@Entity
-@Table(name = "partida")
-public class Partida {
+public class PartidaFiltro {
 	
-	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	
-	@Temporal(TemporalType.DATE)
 	private Calendar data;
-	
-	@JoinColumn(name = "pontuacao_mandante")
 	private Integer pontuacaoMandante;
-	
-	@JoinColumn(name = "pontuacao_visitante")
 	private Integer pontuacaoVisitante;
-	
-	@ManyToOne
-	@JoinColumn(name = "time_mandante_id")
 	private Time mandante;
-	
-	@ManyToOne
-	@JoinColumn(name = "time_visitante_id")
 	private Time visitante;
-	
-	@ManyToOne
-	@JoinColumn(name = "campeonato_id")
 	private Campeonato campeonato;
 	
 	public Integer getId() {
@@ -95,4 +70,17 @@ public class Partida {
 	public void setCampeonato(Campeonato campeonato){
 		this.campeonato = campeonato;
 	}
+	
+	@Override
+	 public String toString() {
+	        return "PartidaDTO{" +
+	                "id=" + id +
+	                ", data='" + data + '\'' +
+	                ", pontuacaoMandante ='" + pontuacaoMandante + '\'' +
+	                ", pontuacaoVisitante='" + pontuacaoMandante + '\'' +
+	                ", mandante='" + mandante + '\'' +
+	                ", visitante='" + visitante + '\'' +
+	                ", campeonato='" + campeonato + '\'' +
+	                '}';
+	 }
 }

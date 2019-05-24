@@ -62,7 +62,7 @@ public class CampeonatoDTO {
 	 
 	 @Override
 	 public String toString() {
-	        return "TimeDTO{" +
+	        return "CampeonatoDTO{" +
 	                "id=" + id +
 	                ", nome='" + nome + '\'' +
 	                ", ano ='" + ano + '\'' +

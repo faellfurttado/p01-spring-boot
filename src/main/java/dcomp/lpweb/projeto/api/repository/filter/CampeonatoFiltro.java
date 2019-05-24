@@ -2,10 +2,8 @@ package dcomp.lpweb.projeto.api.repository.filter;
 
 public class CampeonatoFiltro {
 	
-private Integer id;
-	
+    private Integer id;
 	private String nome;
-	
 	private Integer ano;
     
     public Integer getId() {
